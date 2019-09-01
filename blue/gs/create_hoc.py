@@ -21,7 +21,7 @@ def split_doc(docid_file, data_dir, dest):
                     text = toks[0]
                     labels = set(l[1:-1] for l in toks[1][1:-1].split(', '))
                     labels = ','.join(sorted(labels))
-                    writer.writerow([idx, text, labels])
+                    writer.writerow([idx, text, None, labels])
 
 
 def create_hoc(hoc_dir):
